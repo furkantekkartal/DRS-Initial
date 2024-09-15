@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+
+<VBox prefHeight="779.0" prefWidth="1150.0" spacing="10" style="-fx-background-color: white;" stylesheets="@/styles/UtilityCompanies.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.C_UtilityCompanies">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+<HBox alignment="CENTER_LEFT" spacing="10">
+    <ImageView fitHeight="60" fitWidth="60" preserveRatio="true">
+        <Image url="@/logo.png"/>
+    </ImageView>
+    <VBox>
+        <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Disaster Response System" />
+        <Label style="-fx-font-size: 16;" text="Utility Companies Page" />
+    </VBox>
+    <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+        <Label fx:id="userLabel" style="-fx-font-size: 14;" text="Logged in as: ... " />
+    </HBox>
+</HBox>
+
+    <HBox prefHeight="300.0" prefWidth="1060.0" spacing="20" VBox.vgrow="NEVER">
+        <!-- Left side: Report Table -->
+        <VBox prefHeight="283.0" prefWidth="880.0" spacing="10" HBox.hgrow="ALWAYS">
+            <TableView fx:id="reportTable" prefHeight="248.0" prefWidth="901.0" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" />
+                    <TableColumn fx:id="typeColumn" text="Type" />
+                    <TableColumn fx:id="latitudeColumn" text="Latitude" />
+                    <TableColumn fx:id="longitudeColumn" text="Longitude" />
+                    <TableColumn fx:id="locationColumn" text="Location" />
+                    <TableColumn fx:id="dateTimeColumn" text="Date/Time" />
+                    <TableColumn fx:id="statusColumn" text="Report Status" />
+                    <TableColumn fx:id="priorityColumn" text="Priority" />
+                    <TableColumn fx:id="utilityStatusColumn" text="Utility Status" />
+                </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+            <children>
+                   <Button alignment="TOP_LEFT" onAction="#handleRefreshReports" text="Refresh Reports" />
+            </children>
+            </HBox>
+        </VBox>
+
+        <!-- Right side: Update Status -->
+        <VBox maxWidth="350" minWidth="161.0" prefHeight="283.0" prefWidth="192.0" spacing="10" HBox.hgrow="NEVER">
+            <Label style="-fx-font-weight: bold;" text="Update Status" />
+         <VBox alignment="TOP_RIGHT" prefHeight="152.0" prefWidth="187.0" spacing="10">
+            <children>
+                  <ComboBox fx:id="subDepartmentComboBox" prefHeight="25.0" prefWidth="193.0" promptText="Select Sub-Department" />
+                  <ComboBox fx:id="statusComboBox" prefHeight="25.0" prefWidth="193.0" promptText="Select Status" />
+                  <Button contentDisplay="RIGHT" onAction="#handleSubmitStatus" text="Submit Status" />
+            </children>
+         </VBox>
+         <HBox prefHeight="100.0" prefWidth="200.0" spacing="10" />
+        </VBox>
+    </HBox>
+
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <!-- Bottom Left: Report Details -->
+        <VBox maxWidth="400" spacing="10" HBox.hgrow="SOMETIMES">
+            <Label style="-fx-font-weight: bold;" text="Report Details:" />
+            <TextArea fx:id="reportDetailsArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS" />
+        </VBox>
+
+        <!-- Bottom Right: Communication Log and Resources Needed -->
+        <VBox spacing="10" HBox.hgrow="ALWAYS">
+            <Label style="-fx-font-weight: bold;" text="Resources Needed:" />
+            <TextArea fx:id="resourcesNeededArea" editable="false" prefHeight="100" wrapText="true" VBox.vgrow="SOMETIMES" />
+            
+            <Label style="-fx-font-weight: bold;" text="Communication Log:" />
+            <TextArea fx:id="communicationLogArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS" />
+            <HBox spacing="10">
+                <TextField fx:id="newLogEntryField" promptText="Enter new log entry" HBox.hgrow="ALWAYS" />
+                <Button onAction="#handleAddLogEntry" text="Add Log Entry" />
+            </HBox>
+        </VBox>
+    </HBox>
+</VBox>

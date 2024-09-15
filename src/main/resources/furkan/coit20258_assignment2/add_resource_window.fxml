@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="@/styles/style.css" fx:controller="Controller.C_AddResourceWindow" 
+      spacing="10" alignment="CENTER" prefWidth="400" prefHeight="300">
+    <TextField fx:id="resourceNameField" promptText="Resource Name"/>
+    <TextField fx:id="resourceQuantityField" promptText="Quantity"/>
+    <TextArea fx:id="resourceDescriptionArea" VBox.vgrow="ALWAYS" promptText="Enter resource description here..."/>
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add Resource" onAction="#addResource"/>
+        <Button text="Cancel" onAction="#cancel"/>
+    </HBox>
+</VBox>

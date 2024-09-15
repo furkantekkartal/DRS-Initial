@@ -1,0 +1,10 @@
+username,password,role
+admin,admin,admin
+drc,drc,DRC
+fire,fire,FireDepartment
+health,health,HealthDepartment
+law,law,LawEnforcement
+mete,mete,Meteorology
+geo,geo,Geoscience
+gis,gis,GIS
+util,util,UtilityCompany

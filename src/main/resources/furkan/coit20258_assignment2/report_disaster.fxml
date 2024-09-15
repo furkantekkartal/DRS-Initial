@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane prefWidth="400" minWidth="300" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.C_ReportDisaster">
+    <stylesheets>
+        <URL value="@/styles/report_disaster.css" />
+    </stylesheets>
+    <content>
+        <VBox fx:id="mainContainer" spacing="20" styleClass="container" prefWidth="400" minWidth="300">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            
+            <HBox alignment="CENTER" spacing="10">
+                <ImageView fitHeight="154" fitWidth="175" preserveRatio="true">
+                    <Image url="@/logo.png" />
+                </ImageView>
+            </HBox>
+            
+            <Label styleClass="title" text="Report a Disaster" />
+
+            <VBox spacing="10">
+                <Label styleClass="label" text="Disaster Type:" />
+                <ComboBox fx:id="disasterTypeComboBox" onAction="#handleDisasterTypeSelection" promptText="Select Disaster Type" maxWidth="Infinity" />
+            </VBox>
+
+            <VBox spacing="10">
+                <Label styleClass="label" text="Location:" />
+                <TextField fx:id="locationField" promptText="Enter location" styleClass="mandatory-field" />
+
+                <Label styleClass="label" text="Date:" />
+                <DatePicker fx:id="datePicker" promptText="Select date" styleClass="mandatory-field" maxWidth="Infinity" />
+
+                <Label styleClass="label" text="Reporter Name:" />
+                <TextField fx:id="reporterNameField" promptText="Enter your name" styleClass="mandatory-field" />
+
+                <Label styleClass="label" text="Contact Phone Number:" />
+                <TextField fx:id="contactInfoField" promptText="Enter your contact information(Example: 0123 456 789)" styleClass="mandatory-field" />
+            </VBox>
+
+            <VBox fx:id="specificFieldsContainer" spacing="10">
+                <!-- Wildfire Fields -->
+                <VBox fx:id="wildfireFields" spacing="10" visible="false" managed="false">
+                    <Label styleClass="label" text="Fire Intensity:" />
+                    <ComboBox fx:id="intensityComboBox" promptText="Select Fire Intensity" maxWidth="Infinity" />
+                    <Label styleClass="label" text="Affected Area Size:" />
+                    <TextField fx:id="areaField" promptText="Enter affected area size" />
+                    <Label styleClass="label" text="Nearby Infrastructure:" />
+                    <TextField fx:id="infrastructureField" promptText="Enter nearby infrastructure at risk" />
+                </VBox>
+
+                <!-- Hurricane Fields -->
+                <VBox fx:id="hurricaneFields" spacing="10" visible="false" managed="false">
+                    <Label styleClass="label" text="Wind Speed:" />
+                    <TextField fx:id="windSpeedField" promptText="Enter wind speed" />
+                    <CheckBox fx:id="floodRiskCheckBox" text="Flood Risk" />
+                    <Label styleClass="label" text="Evacuation Status:" />
+                    <ComboBox fx:id="evacuationStatusComboBox" promptText="Select evacuation status" maxWidth="Infinity" />
+                </VBox>
+
+                <!-- Earthquake Fields -->
+                <VBox fx:id="earthquakeFields" spacing="10" visible="false" managed="false">
+                    <Label styleClass="label" text="Magnitude:" />
+                    <TextField fx:id="magnitudeField" promptText="Enter magnitude" />
+                    <Label styleClass="label" text="Depth:" />
+                    <TextField fx:id="depthField" promptText="Enter depth" />
+                    <CheckBox fx:id="aftershocksCheckBox" text="Aftershocks Expected" />
+                </VBox>
+
+                <!-- Flood Fields -->
+                <VBox fx:id="floodFields" spacing="10" visible="false" managed="false">
+                    <Label styleClass="label" text="Water Level:" />
+                    <ComboBox fx:id="waterLevelComboBox" promptText="Select Water Level" maxWidth="Infinity" />
+                    <Label styleClass="label" text="Evacuation Status:" />
+                    <ComboBox fx:id="floodEvacuationStatusComboBox" promptText="Select Evacuation Status" maxWidth="Infinity" />
+                    <Label styleClass="label" text="Infrastructure Damage:" />
+                    <TextField fx:id="infrastructureDamageField" promptText="Enter infrastructure damage" />
+                </VBox>
+
+                <!-- Landslide Fields -->
+                <VBox fx:id="landslideFields" spacing="10" visible="false" managed="false">
+                    <Label styleClass="label" text="Slope Stability:" />
+                    <ComboBox fx:id="slopeStabilityComboBox" promptText="Select Slope Stability" maxWidth="Infinity" />
+                    <Label styleClass="label" text="Blocked Roads:" />
+                    <TextField fx:id="blockedRoadsField" promptText="Enter blocked roads" />
+                    <Label styleClass="label" text="Casualties/Injuries:" />
+                    <TextField fx:id="casualtiesField" promptText="Enter casualties/injuries" />
+                </VBox>
+
+                <!-- Other Fields -->
+                <VBox fx:id="otherFields" spacing="10" visible="false" managed="false">
+                    <Label styleClass="label" text="Disaster Description:" />
+                    <TextArea fx:id="disasterDescriptionArea" promptText="Describe the disaster" />
+                    <Label styleClass="label" text="Estimated Impact:" />
+                    <ComboBox fx:id="impactComboBox" promptText="Select Estimated Impact" maxWidth="Infinity" />
+                </VBox>
+            </VBox>
+
+            <Button onAction="#handleSubmitReport" styleClass="submit-button" text="Submit Report" maxWidth="Infinity" />
+        </VBox>
+    </content>
+</ScrollPane>

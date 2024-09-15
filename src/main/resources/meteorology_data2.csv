@@ -1,0 +1,14 @@
+location,latitude,longitude,temperature,humidity,wind_speed,wind_direction,conditions
+"Horningsea Park, Sydney",-33.9439,150.8439,25.5,60,10,NE ⇗,Sunny
+"Redfern, Sydney",-33.8932,151.2057,24,65,15,SE ⇘,Cloudy
+"Muswellbrook, New South Wales",-32.2655,150.8885,27,55,8,NW ⇖,Partly Cloudy
+"Penrith, Sydney",-33.6167,150.75,23,70,20,S ⇓,Rainy
+"Blue Mountains, New South Wales",-33.6833,150.2833,22,75,12,SW ⇙,Overcast
+"Wollongong, New South Wales",-34.4833,150.9,26,58,5,E ⇒,Sunny
+"Hawkesbury, NSW",-33.6185,150.7574,24,68,18,S ⇓,Rainy
+"Megalong Valley, NSW",-33.7300,150.2345,21,72,10,SW ⇙,Overcast
+"Port Kembla, NSW",-34.4672,150.9014,25,62,7,SE ⇘,Partly Cloudy
+"Blue Mountains, NSW",-33.7099,150.3010,30,25,45,NW ⇖,Sunny
+"Gold Coast, QLD",-28.0167,153.4000,28,80,120,NE ⇗,Hurricane
+"Newcastle, NSW",-32.9283,151.7817,22,70,15,E ⇒,Cloudy
+"Rockhampton, QLD",-23.3816,150.5078,26,85,25,SE ⇘,Heavy Rain

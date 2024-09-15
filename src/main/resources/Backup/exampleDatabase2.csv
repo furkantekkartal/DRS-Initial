@@ -1,0 +1,48 @@
+id,disaster_type,location,latitude,longitude,date_time,reporter_name,contact_info,created_at,fire_intensity,affected_area_size,nearby_infrastructure,wind_speed,flood_risk,evacuation_status,magnitude,depth,aftershocks_expected,water_level,flood_evacuation_status,infrastructure_damage,slope_stability,blocked_roads,casualties_injuries,disaster_description,estimated_impact,response_status,assigned_department,resources_needed,communication_log,priority_level,fire_department_status,health_department_status,law_enforcement_status,meteorology_status,geoscience_status,gis_status,utility_companies_status,utility_electricity_status,utility_water_status,utility_gas_status,utility_telecommunications_status
+1,Wildfire,"Horningsea Park, Sydney",-33.9439,150.8439,28/08/2024 3:57,Furkan Tekkartal,0123 456 789,30/08/2024 18:10,Low,200m2,None,NULL,0,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Pending,,"[05/09/2024 00:43] Resource Added: Fire Truck (Quantity: 2)
+Description: 10 Personnal and 2 Fire Truck
+[05/09/2024 00:43] Resource Added: Ambulance (Quantity: 1)
+Description: 1 People injured","[28/08/2024 06:30] Fire Department: Initial report received. Dispatching two fire trucks to the location.
+[28/08/2024 07:15] Police Department: Setting up roadblocks in the affected area. Initiating evacuation procedures.
+[28/08/2024 08:00] Fire Department: Fire contained to a 2km radius. Requesting additional water tankers.
+[28/08/2024 09:30] Emergency Services: Evacuation center set up at Horningsea Park Community Center.
+[28/08/2024 12:00] Fire Department: Fire 60% contained. Continuing efforts to fully extinguish.
+[28/08/2024 18:00] Fire Department: Fire fully contained. Beginning cool-down operations.
+[29/08/2024 08:00] Emergency Services: All-clear given. Residents can return to unaffected areas.",Low,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NULL,NULL,NULL,NULL
+2,Hurricane,"Redfern, Sydney",-33.8932,151.2057,14/08/2024 23:55,Steve Rogers,1111 222 333,30/08/2024 18:12,NULL,NULL,NULL,70kmh,1,Partial,NULL,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Pending,,"[05/09/2024 00:46] Resource Added: Police Team (Quantity: 5)
+Description: Water Cannon Truck needed","[14/08/2024 10:00] Meteorology Department: Hurricane warning issued for Sydney metropolitan area.
+[14/08/2024 12:00] Emergency Services: Initiating city-wide alert. Advising residents to secure properties and prepare for evacuation.
+[14/08/2024 15:00] Police Department: Beginning evacuation of low-lying areas in Redfern.
+[14/08/2024 18:00] Utility Company: Preemptively shutting down power in flood-prone areas to prevent electrocution hazards.
+[15/08/2024 02:00] Emergency Services: Hurricane making landfall. All emergency responders on high alert.
+[15/08/2024 10:00] Fire Department: Responding to multiple calls about fallen trees and power lines.
+[15/08/2024 16:00] Emergency Services: Hurricane passed. Beginning damage assessment and rescue operations.",Medium,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NULL,NULL,NULL,NULL
+3,Earthquake,"Muswellbrook, New South Wales",0,0,24/08/2024 6:47,Tony Stark,2222 333 444,30/08/2024 18:14,NULL,NULL,NULL,NULL,0,NULL,4.5,70 km,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,In Progress,,,"[24/08/2024 03:15] Geoscience Australia: Earthquake of magnitude 6.2 detected in Muswellbrook area.
+[24/08/2024 03:20] Emergency Services: Activating earthquake response protocol. All units mobilizing.
+[24/08/2024 03:45] Fire Department: Responding to reports of collapsed buildings in town center.
+[24/08/2024 04:30] Police Department: Setting up emergency cordons around damaged areas.
+[24/08/2024 05:00] Health Department: Mobile medical units dispatched to assist injured residents.
+[24/08/2024 08:00] Utility Company: Working on restoring power to affected areas. Gas lines shut off as precaution.
+[24/08/2024 12:00] Emergency Services: Search and rescue operations ongoing. Evacuation centers established at local schools.",High,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NULL,NULL,NULL,NULL
+4,Flood,"Hawkesbury, NSW",0,0,15/08/2024 16:45,Natasha Romanov,3333 444 555,30/08/2024 18:16,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,0,Medium,Partial,Avangers Road,NULL,NULL,NULL,NULL,NULL,In Progress,,,"[15/08/2024 09:00] Meteorology Department: Flood warning issued for Hawkesbury River.
+[15/08/2024 11:00] Emergency Services: Initiating flood preparation measures. Sandbags being distributed.
+[15/08/2024 15:00] Police Department: Beginning evacuation of low-lying areas along the river.
+[15/08/2024 20:00] Emergency Services: Water levels rising rapidly. All residents in flood zones must evacuate immediately.
+[16/08/2024 02:00] Fire Department: Conducting water rescues in flooded neighborhoods.
+[16/08/2024 10:00] Utility Company: Shutting down power in flooded areas to prevent electrical hazards.
+[16/08/2024 18:00] Emergency Services: Flood waters stabilizing. Maintaining evacuation orders until further notice.",Low,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NULL,NULL,NULL,NULL
+5,Landslide,"Megalong Valley, NSW",0,0,5/04/2024 12:56,Bruce Banner,4444 555 666,30/08/2024 18:18,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,0,NULL,NULL,NULL,Stable,Megalong Road 11-15 km,No injuries,NULL,NULL,Resolved,,NULL,"[05/04/2024 07:30] Local Resident: Reported large cracks appearing on hillside above Megalong Valley.
+[05/04/2024 08:00] Geoscience Australia: Dispatching team to assess landslide risk.
+[05/04/2024 10:30] Emergency Services: Initiating precautionary evacuation of properties at base of the hill.
+[05/04/2024 13:00] Geoscience Australia: High risk of imminent landslide confirmed. Recommending immediate full evacuation.
+[05/04/2024 15:00] Police Department: Evacuation of Megalong Valley in progress. Roads being closed.
+[05/04/2024 19:45] Emergency Services: Large landslide occurred. No injuries reported due to early evacuation.
+[06/04/2024 08:00] Emergency Services: Beginning damage assessment and planning for long-term mitigation measures.",Medium,NOT_RESPONSIBLE,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONDED_YET,NOT_RESPONDED_YET,NULL,NULL,NULL,NULL
+6,Other,"Port Kembla, NSW",0,0,3/06/2024 8:40,Aqua Man,5555 666 777,30/08/2024 18:22,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,"The massive tsunami generated by the 2011 Tohoku earthquake in Japan had measurable effects on Australian coast, 135 cm wave at Port Kembla, NSW",Low,Resolved,,,"[03/06/2024 11:20] Port Authority: Reported chemical spill from a container ship at Port Kembla.
+[03/06/2024 11:30] Fire Department: Hazmat team dispatched to the scene.
+[03/06/2024 12:00] Police Department: Establishing safety perimeter around the port. Evacuating nearby areas.
+[03/06/2024 13:00] Environmental Protection Agency: Team en route to assess environmental impact.
+[03/06/2024 14:30] Health Department: Issuing public health warning for residents in downwind areas.
+[03/06/2024 16:00] Fire Department: Chemical identified as non-toxic but corrosive. Cleanup operations beginning.
+[03/06/2024 20:00] Port Authority: Spill contained. Environmental impact appears minimal.
+[04/06/2024 09:00] Environmental Protection Agency: All-clear given. Port operations can resume.",High,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NOT_RESPONDED_YET,NOT_RESPONDED_YET,NOT_RESPONDED_YET,NOT_RESPONSIBLE,NULL,NULL,NULL,NULL

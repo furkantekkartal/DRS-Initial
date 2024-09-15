@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="870" prefWidth="1200.0" spacing="10" styleClass="Coordinator-container" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.C_Coordinator">
+    <stylesheets>
+        <URL value="@/styles/Coordinator.css" />
+    </stylesheets>
+    
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <ImageView fitHeight="60" fitWidth="60" preserveRatio="true">
+            <Image url="@/logo.png" />
+        </ImageView>
+        <VBox>
+            <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Disaster Response System" />
+            <Label style="-fx-font-size: 16;" text="Coordinator Page" />
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+            <Label fx:id="userLabel" style="-fx-font-size: 14;" text="Logged in as: ... " />
+        </HBox>
+    </HBox>
+
+    <TabPane VBox.vgrow="ALWAYS">
+        <Tab closable="false" text="Reports">
+            <VBox spacing="10" VBox.vgrow="ALWAYS">
+                <TableView fx:id="reportTableView" prefHeight="320.0" prefWidth="979.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="idColumn" text="ID" />
+                        <TableColumn fx:id="disasterTypeColumn" text="Type" />
+                        <TableColumn fx:id="locationColumn" text="Location" />
+                        <TableColumn fx:id="latitudeColumn" text="Latitude" />
+                        <TableColumn fx:id="longitudeColumn" text="Longitude" />
+                        <TableColumn fx:id="dateTimeColumn" text="Date/Time" />
+                        <TableColumn fx:id="reporterNameColumn" text="Reporter" />
+                        <TableColumn fx:id="contactInfoColumn" text="Contact" />
+                        <TableColumn fx:id="responseStatusColumn" text="Status" />
+                        <TableColumn fx:id="priorityLevelColumn" text="Priority" />
+                    </columns>
+                </TableView>
+                <HBox prefHeight="47.0" prefWidth="999.0" spacing="5">
+                    <HBox alignment="CENTER_LEFT" fillHeight="false" minWidth="320.0" prefHeight="47.0" prefWidth="346.0" spacing="10.0">
+                        <Button fx:id="getCoordinates" text="Get Coordinates" />
+                        <Button fx:id="getWeather" text="Get Weather" />
+                    </HBox>
+                    <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="BOTTOM_CENTER" minWidth="350.0" prefHeight="47.0" prefWidth="364.0" spacing="10.0">
+                            <VBox minWidth="120.0" prefHeight="47.0" prefWidth="122.0" spacing="5.0">
+                                <Label text="Status:" />
+                                <ComboBox fx:id="responseStatusComboBox" prefHeight="25.0" prefWidth="127.0" />
+                            </VBox>
+                            <VBox minWidth="109.0" prefHeight="47.0" prefWidth="109.0" spacing="5">
+                                <Label text="Priority Level:" />
+                                <ComboBox fx:id="priorityLevelComboBox" prefHeight="25.0" prefWidth="108.0" />
+                            </VBox>
+                     <Button mnemonicParsing="false" onAction="#updateButton" prefHeight="25.0" prefWidth="100.0" text="Update" />
+                        </HBox>
+                    </HBox>
+                    <HBox alignment="CENTER_RIGHT" fillHeight="false" prefHeight="47.0" prefWidth="1322.0">
+                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" maxWidth="140.0" minWidth="140.0" onAction="#refreshReports" prefWidth="140.0" text="Refresh Report Page" textAlignment="CENTER" />
+                    </HBox>
+                </HBox>
+
+                <HBox prefHeight="484.0" prefWidth="1061.0" spacing="10" VBox.vgrow="ALWAYS">
+                    <VBox maxWidth="400" minWidth="320.0" spacing="5" HBox.hgrow="SOMETIMES">
+                        <Label text="Report Details:" />
+                        <TextArea fx:id="detailsTextArea" editable="false" minWidth="300.0" prefHeight="415.0" prefWidth="325.0" VBox.vgrow="ALWAYS" />
+                    </VBox>
+                    <VBox prefHeight="460.0" prefWidth="692.0" spacing="5" HBox.hgrow="ALWAYS">
+                        <HBox maxHeight="27.0" minWidth="27.0" prefHeight="28.0" prefWidth="753.0" />
+                        <HBox prefHeight="76.0" prefWidth="752.0" spacing="10">
+                            <AnchorPane prefHeight="64.0" prefWidth="1500.0" style="-fx-border-color: D0D0D0;">
+                                <HBox alignment="CENTER_LEFT" layoutX="8.0" layoutY="28.0" prefHeight="35.0" prefWidth="1000.0" spacing="10" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="27.0">
+                                    <Button onAction="#handleAssignDepartments" prefHeight="25.0" prefWidth="83.0" text="Assign" />
+                                    <CheckBox fx:id="fireDeptCheckBox" text="Fire Department" />
+                                    <CheckBox fx:id="healthDeptCheckBox" text="Health Department" />
+                                    <CheckBox fx:id="lawEnforcementCheckBox" text="Law Enforcement" />
+                                    <CheckBox fx:id="utilityCompanyCheckBox" text="Utility Companies" />
+                                </HBox>
+                                <Label alignment="CENTER" prefHeight="25.0" prefWidth="213.0" text="Action Required Departments">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                            </AnchorPane>
+                        </HBox>
+    
+                        <!-- New HBox for Resources Needed and Weather Impact -->
+                        <HBox spacing="10" VBox.vgrow="SOMETIMES">
+                            <!-- Left side: Resources Needed -->
+                            <VBox prefHeight="141.0" prefWidth="550.0" spacing="5" HBox.hgrow="ALWAYS">
+                                <Label style="-fx-font-weight: bold;" text="Resources Needed:" />
+                                <TextArea fx:id="resourcesNeededArea" editable="false" prefHeight="100.0" prefWidth="1500.0" VBox.vgrow="ALWAYS" />
+                                <Button onAction="#openAddResourceWindow" text="Add Resource" />
+                            </VBox>
+        
+                            <!-- Right side: Weather Impact and Calculated Priority -->
+                            <VBox maxWidth="248.0" minWidth="230.0" prefHeight="141.0" prefWidth="248.0" spacing="5" HBox.hgrow="ALWAYS">
+                                <Label style="-fx-font-weight: bold;" text="Weather Impact Analysis:" />
+                                <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="191.0" spacing="10.0">
+                                    <TextField fx:id="weatherImpactField" editable="false" prefHeight="25.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                    <Button maxWidth="130.0" minWidth="130.0" onAction="#handleWeatherImpactButton" prefHeight="25.0" prefWidth="130.0" text="Weather Impect" />
+                                </HBox>
+            
+                                <Label style="-fx-font-weight: bold;" text="Calculated Priority Suggestion" />
+                                <HBox alignment="CENTER_RIGHT" spacing="10">
+                                    <TextField fx:id="calculatedPriorityField" editable="false" prefHeight="25.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                    <Button maxWidth="130.0" minWidth="130.0" onAction="#handlePrioritySuggestionButton" prefHeight="25.0" prefWidth="130.0" text="Priority Suggestion" />
+                                </HBox>
+                            </VBox>
+                        </HBox>
+    
+                        <!-- Communication Log Section -->
+                        <VBox spacing="5" VBox.vgrow="ALWAYS">
+                            <Label style="-fx-font-weight: bold;" text="Communication Log:" />
+                            <TextArea fx:id="communicationLogArea" editable="false"  prefHeight="138.0" prefWidth="684.0" VBox.vgrow="ALWAYS" />
+                            <HBox spacing="10">
+                                <TextField fx:id="newLogEntryField" promptText="Enter new log entry" HBox.hgrow="ALWAYS" />
+                                <Button onAction="#handleAddLogEntry" text="Add Log Entry" />
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </Tab>
+    
+        <Tab closable="false" text="Disaster Status">
+            <VBox spacing="10">
+                <TableView fx:id="disasterStatusTableView" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="statusIdColumn" text="ID" />
+                        <TableColumn fx:id="statusTypeColumn" text="Type" />
+                        <TableColumn fx:id="statusDateColumn" text="Date" />
+                        <TableColumn fx:id="statusLocationColumn" text="Location" />
+                        <TableColumn fx:id="fireDepartmentStatusColumn" text="Fire Department" />
+                        <TableColumn fx:id="healthDepartmentStatusColumn" text="Health Department" />
+                        <TableColumn fx:id="lawEnforcementStatusColumn" text="Law Enforcement" />
+                        <TableColumn fx:id="utilityElectricityStatusColumn" text="Utility - Electricity" />
+                        <TableColumn fx:id="utilityWaterStatusColumn" text="Utility - Water" />
+                        <TableColumn fx:id="utilityGasStatusColumn" text="Utility - Gas" />
+                        <TableColumn fx:id="utilityTelecomStatusColumn" text="Utility - Telecom" />
+                    </columns>
+                </TableView>
+                <Button onAction="#refreshDisasterStatus" text="Refresh Disaster Status" />
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>

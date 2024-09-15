@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.cell.TextFieldTableCell?>
+<?import javafx.scene.control.Button?>
+
+<VBox alignment="CENTER" spacing="20" stylesheets="@/styles/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="Controller.C_UserTable">
+    <TableView fx:id="userTable" VBox.vgrow="ALWAYS" editable="true">
+        <columns>
+            <TableColumn fx:id="userNameColumn" text="Username">
+                <cellFactory>
+                    <TextFieldTableCell fx:factory="forTableColumn" />
+                </cellFactory>
+            </TableColumn>
+            <TableColumn fx:id="userPasswordColumn" text="Password">
+                <cellFactory>
+                    <TextFieldTableCell fx:factory="forTableColumn" />
+                </cellFactory>
+            </TableColumn>
+            <TableColumn fx:id="roleColumn" text="Role">
+                <cellFactory>
+                    <TextFieldTableCell fx:factory="forTableColumn" />
+                </cellFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>

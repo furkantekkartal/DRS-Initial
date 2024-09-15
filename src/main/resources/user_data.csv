@@ -1,0 +1,13 @@
+username,password,role
+admin,admin,admin
+john.smith,pass,Coordinator
+emma.jones,pass,FireDepartment
+michael.brown,pass,HealthDepartment
+sarah.davis,pass,LawEnforcement
+david.wilson,pass,Meteorology
+lisa.taylor,pass,Geoscience
+robert.anderson,pass,UtilityCompanies
+james.martin,pass,Utility_Electricity
+emily.thomas,pass,Utility_Water
+daniel.white,pass,Utility_Gas
+olivia.clark,pass,Utility_Telecommunications
